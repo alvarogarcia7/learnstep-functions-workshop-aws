@@ -6,3 +6,6 @@ provider:
   region: eu-west-1
   stage: dev
 
+plugins:
+  - serverless-step-functions
+
