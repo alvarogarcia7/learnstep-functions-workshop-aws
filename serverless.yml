@@ -2,10 +2,20 @@ service: LearnStepFunctions
 
 provider:
   name: aws
+  runtime: dotnetcore1.0
   profile: serverless-admin-agarcia
   region: eu-west-1
   stage: dev
 
+stepFunctions:
+  stateMachines:
+    rpg:
+      definition:
+        StartAt: Attack
+        States:
+          Attack:
+            Type: Pass
+            End: true
+
 plugins:
   - serverless-step-functions
-
